@@ -1,5 +1,15 @@
 # Volunteam App
 
+Description
+Volunteam is an app that helps users discover and participate in local volunteering events. Users can view events on a map, see details of each event, and create new events if authenticated. The app provides real-time location tracking and a user-friendly interface for engaging with the local volunteering community.
+
+Goals
+Provide an intuitive map-based interface to explore local volunteering opportunities.
+Allow users to create and manage volunteering events.
+Securely authenticate users and store their information locally for seamless experience.
+Support image uploads for events using a reliable image hosting service.
+Ensure offline-friendly experience with caching of user and event data.
+
 ## Initial Setup
 
 Clean Up Old Expo CLI : To avoid conflicts with the latest SDK:
@@ -21,9 +31,9 @@ Install TypeScript
 
 npm install typescript@5.9.2 --save-dev
 
-Install Dependencies | To avoid dependency conflicts:
+Install Dependencies
 
-npm install --legacy-peer-deps
+npm install
 
 Verify Installation
 
