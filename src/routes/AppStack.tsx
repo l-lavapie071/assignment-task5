@@ -1,37 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+// React Navigation imports
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
+// Create Stack Navigator
 const { Navigator, Screen } = createStackNavigator();
 
-import Login from '../pages/Login';
-import EventsMap from '../pages/EventsMap';
-import { AuthenticationContext, AuthenticationContextObject } from '../context/AuthenticationContext';
-import { User } from '../types/User';
+// Import pages/screens
+import Login from "../pages/Login";
+import EventsMap from "../pages/EventsMap";
+
+// Import authentication context and types
+import {
+  AuthenticationContext,
+  AuthenticationContextObject,
+} from "../context/AuthenticationContext";
+import { User } from "../types/User";
 
 export default function Routes() {
-    const [authenticatedUser, setAuthenticatedUser] = useState<User>();
+  // State to store the currently authenticated user
+  const [authenticatedUser, setAuthenticatedUser] = useState<User>();
 
-    const authenticationContextObj: AuthenticationContextObject = {
-        value: authenticatedUser as User,
-        setValue: setAuthenticatedUser,
-    };
+  // Create the authentication context object
+  const authenticationContextObj: AuthenticationContextObject = {
+    value: authenticatedUser as User, // Current authenticated user
+    setValue: setAuthenticatedUser, // Function to update user
+  };
 
-    return (
-        <AuthenticationContext.Provider value={authenticationContextObj}>
-            <NavigationContainer>
-                <Navigator
-                    screenOptions={{
-                        headerShown: false,
-                        cardStyle: { backgroundColor: '#F2F3F5' },
-                    }}
-                >
-                    <Screen name="Login" component={Login} />
+  return (
+    // Provide authentication context to the entire app
+    <AuthenticationContext.Provider value={authenticationContextObj}>
+      {/* Navigation container manages the navigation state */}
+      <NavigationContainer>
+        {/* Stack navigator for managing screen stack */}
+        <Navigator
+          screenOptions={{
+            headerShown: false, // Hide default headers
+            cardStyle: { backgroundColor: "#F2F3F5" }, // Default background color
+          }}
+        >
+          {/* Login screen */}
+          <Screen name="Login" component={Login} />
 
-                    <Screen name="EventsMap" component={EventsMap} />
-                </Navigator>
-            </NavigationContainer>
-        </AuthenticationContext.Provider>
-    );
+          {/* Main events map screen */}
+          <Screen name="EventsMap" component={EventsMap} />
+        </Navigator>
+      </NavigationContainer>
+    </AuthenticationContext.Provider>
+  );
 }
