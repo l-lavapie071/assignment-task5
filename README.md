@@ -1,5 +1,37 @@
 # Volunteam App
 
+## Initial Setup
+
+Clean Up Old Expo CLI : To avoid conflicts with the latest SDK:
+
+npm uninstall -g expo-cli
+npm cache clean --force
+
+Install Local Expo CLI
+
+npm install expo@^54.0.0 --save-dev
+npx expo --version
+
+Install Compatible React & React DOM
+For Expo SDK 54, use:
+
+npm install react@19.1.0 react-dom@19.1.0
+
+Install TypeScript
+
+npm install typescript@5.9.2 --save-dev
+
+Install Dependencies | To avoid dependency conflicts:
+
+npm install --legacy-peer-deps
+
+Verify Installation
+
+Run:
+npx expo-doctor
+
+All checks should pass. Minor warnings about version mismatches can be ignored, but make sure React matches SDK requirements.
+
 ## Setting up the fake API (json-server)
 
 Update the file `src/services/api.ts`.

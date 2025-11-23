@@ -63,7 +63,7 @@
                 "last": "Ulriksen"
             },
             "email": "ulla.ulriksen@example.com",
-            "password": "$2a$10$hd96yCeGW794sN8OL7SeMeOGPVEY.wiQDcsHbf5p.Ngtjx93iqjIG",
+            "password": "$2b$10$nALz8Lr09c3zk9fBGHt2RueDwPBHQR1nxEIxwqN7Oq/GjtzP5vQ0e",
             "id": "EF-BZ00",
             "mobile": "(910) 862-3167"
         },
@@ -73,7 +73,7 @@
                 "last": "Akyüz"
             },
             "email": "yasemin.akyuz@example.com",
-            "password": "$2a$10$8RRvGY70JK5/Y5jPnltkXOU/wYLhpRcbU48rYzNYx.XDFfqsnkYHm",
+            "password": "$2b$10$nALz8Lr09c3zk9fBGHt2RueDwPBHQR1nxEIxwqN7Oq/GjtzP5vQ0e",
             "id": "Q5bVHgP",
             "mobile": "(243) 359-9759"
         },
@@ -83,7 +83,7 @@
                 "last": "Carluccio"
             },
             "email": "luigi@carluccio.it",
-            "password": "$2a$10$riZrILdnrgZfM1eymhR6leGdp9Pe3s1MbL6ig5HegPf0QcYImfV22",
+            "password": "$2b$10$Ew1eRDQvE1r5Iu7tW0XG2uR0dC7CU9rZxg9mFQvQFJZxFzYh1UuM2",
             "id": "gpFfX6e",
             "mobile": "(171) 946-2538"
         },
